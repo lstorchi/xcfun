@@ -2,7 +2,7 @@ find_package(SWIG REQUIRED)
 include(UseSWIG)
 
 list(APPEND CMAKE_MODULE_PATH ${PROJECT_SOURCE_DIR}/cmake/custom)
-find_package(PythonLibsNew 2.7 REQUIRED)
+find_package(PythonLibsNew 3.6 REQUIRED)
 find_package(NumPy REQUIRED)
 
 set_source_files_properties(xcfun_swig.i
