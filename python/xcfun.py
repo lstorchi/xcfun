@@ -72,7 +72,7 @@ class Functional(object):
             blyp_func = Functional({'BeckeX': 1.0, 'LYPC': 1.0})
         """
         self._func = xc_new_functional()
-        for name, weight in funcdict.items():
+        for name, weight in list(funcdict.items()):
             ret = xc_set(self._func, name, weight)
             if not ret == 0:
                 raise XCFunException('unknown functional selected')
